@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="am">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123c32"><meta name="description" content="Jemal Books and Hadith App - multilingual Islamic digital library">
+<title>Jemal Books and Hadith App</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+ <div class="brand"><div class="mark">ج</div><div><b>Jemal Books</b><small data-i18n="brandSub">Books & Hadith Library</small></div></div>
+ <div class="top-actions"><label class="language-label" for="languageSelect" data-i18n="language">ቋንቋ</label><select id="languageSelect" aria-label="Language"><option value="am">አማርኛ</option><option value="om">Afaan Oromoo</option><option value="ar">العربية</option><option value="en">English</option></select><button id="installBtn" class="outline hidden" data-i18n="install">Install App</button></div>
+</header>
+<main>
+<section class="hero"><p class="eyebrow">مكتبة إسلامية رقمية · DIGITAL ISLAMIC LIBRARY</p><h1 data-i18n="heroTitle">እውቀትን በቀላሉ ያግኙ</h1><p data-i18n="heroText">ቁርአን፣ ሐዲስ፣ ፊቅህ፣ ዐቂዳ፣ ተፍሲር እና ሌሎች የእስልምና መጻሕፍት።</p>
+<div class="searchbox"><span>⌕</span><input id="searchInput" placeholder="መጽሐፍ፣ ደራሲ ወይም ሐዲስ ፈልግ..." aria-label="Search library"><button id="clearSearch" aria-label="Clear search">×</button></div></section>
+<nav class="tabs" aria-label="Main navigation"><button class="tab active" data-view="library" data-i18n="library">ቤተ-መጻሕፍት</button><button class="tab" data-view="hadith" data-i18n="hadith">ሐዲስ</button><button class="tab" data-view="saved" data-i18n="saved">የተቀመጡ</button><button class="tab" data-view="admin" data-i18n="admin">አስተዳዳሪ</button></nav>
+<section id="libraryView" class="view"><div class="section-head"><div><h2 data-i18n="collection">የመጻሕፍት ስብስብ</h2><p data-i18n="chooseCategory">በምድብ ይምረጡ</p></div><span id="bookCount" class="count">0</span></div><div id="categories" class="chips"></div><div id="bookGrid" class="book-grid"></div><div id="emptyState" class="empty hidden" data-i18n="empty">ምንም መጽሐፍ አልተገኘም።</div></section>
+<section id="hadithView" class="view hidden"><div class="section-head"><div><h2 data-i18n="hadithSection">የሐዲስ ክፍል</h2><p data-i18n="hadithSub">የሐዲስ ስብስቦችን ይፈልጉ</p></div></div><div id="hadithList" class="stack"></div><p class="notice" data-i18n="verification">ማስታወሻ፦ የሐዲስ ጽሑፍ፣ ቁጥርና ደረጃ ከታመነ የመጀመሪያ ምንጭ መረጋገጥ አለበት።</p></section>
+<section id="savedView" class="view hidden"><div class="section-head"><div><h2 data-i18n="savedBooks">የተቀመጡ መጻሕፍት</h2><p data-i18n="bookmarks">ዕልባት ያደረጉት</p></div></div><div id="savedGrid" class="book-grid"></div><div id="savedEmpty" class="empty" data-i18n="noSaved">ገና የተቀመጠ መጽሐፍ የለም።</div></section>
+<section id="adminView" class="view hidden"><div class="section-head"><div><h2 data-i18n="adminTitle">የአስተዳዳሪ መድረክ</h2><p data-i18n="adminSub">የመጽሐፍ መረጃ ያስገቡ</p></div></div><div class="admin-card">
+<label><span data-i18n="bookTitle">የመጽሐፍ ርዕስ</span><input id="newTitle" placeholder="Book title"></label><label><span data-i18n="author">ደራሲ</span><input id="newAuthor" placeholder="Author"></label>
+<label><span data-i18n="category">ምድብ</span><select id="newCategory"><option>ሐዲስ</option><option>ተፍሲር</option><option>ፊቅህ</option><option>ዐቂዳ</option><option>ሲራ</option><option>የዓረብኛ ቋንቋ</option><option>ሌሎች</option></select></label>
+<label><span data-i18n="contentLanguage">የይዘት ቋንቋ</span><select id="newLanguage"><option>Arabic</option><option>Amharic</option><option>Afaan Oromoo</option><option>Arabic + Amharic</option><option>Arabic + Afaan Oromoo</option></select></label>
+<label><span data-i18n="description">መግለጫ</span><textarea id="newDescription" rows="3"></textarea></label><label><span data-i18n="pdfFile">PDF ፋይል</span><input id="pdfFile" type="file" accept="application/pdf"></label>
+<button id="addBookBtn" class="primary" data-i18n="addBook">መጽሐፍ ጨምር</button><p class="fineprint" data-i18n="adminNote">የአሁኑ ስሪት የመጽሐፍ መረጃን በዚህ መሣሪያ ላይ ብቻ ያስቀምጣል። የጋራ ዳታቤዝና Cloud PDF ማከማቻ ገና ማገናዘብ አለበት።</p>
+</div></section></main>
+<div id="reader" class="reader hidden" role="dialog" aria-modal="true"><div class="reader-head"><button id="closeReader" class="icon-btn">←</button><div><b id="readerTitle">Book</b><small id="readerMeta"></small></div><button id="saveReader" class="outline">☆</button></div><div class="reader-body" id="readerBody"></div></div>
+<footer><b>Jemal Books and Hadith App</b><span>اقرأ · تعلم · اعمل</span></footer><script src="app.js"></script>
+</body></html>

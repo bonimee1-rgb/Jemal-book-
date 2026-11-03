@@ -1,0 +1,9 @@
+{
+  "name": "Jemal Books and Hadith App",
+  "short_name": "Jemal Books",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f3",
+  "theme_color": "#123c32",
+  "icons": []
+}
