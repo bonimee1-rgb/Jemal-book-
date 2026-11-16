@@ -10,7 +10,7 @@
   // Paste your FULL Supabase Publishable Key below.
   // It must start with sb_publishable_
   const SUPABASE_PUBLISHABLE_KEY =
-    "PASTE_YOUR_REAL_PUBLISHABLE_KEY_HERE";
+    DwxbBvIxhvdGpA9oIic_QQ_5yDajyIT
 
   // Check configuration
   const configured =
