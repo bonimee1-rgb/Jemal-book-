@@ -11,8 +11,8 @@
 
   const SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
 
-  const SUPABASE_PUBLISHABLE_KEY =
-    "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE";
+  const SUPABASE_PUBLISHABLE_KEY =sb_publishable_4X1EqtdSb5TxRrp445x-Gw_cj5cfxGC
+  
 
   const isConfigured =
     SUPABASE_URL.startsWith("https://") &&
