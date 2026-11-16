@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#103d30">
+  <meta name="description" content="Bon Quran - Read and learn the Holy Quran in Arabic, Amharic, English and Afaan Oromoo.">
+  <title>Bon Quran | ቁርአን</title>
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    [hidden] { display: none !important; }
+
+    .ayah-translation {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text);
+      padding: 10px 4px;
+    }
+
+    .ayah-number {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      font-size: 14px;
+      color: var(--gold);
+    }
+
+    .ayah-arabic {
+      font-family: "Amiri", serif;
+    }
+
+    .status-message {
+      padding: 15px;
+      border-radius: 12px;
+      color: var(--muted);
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .reader-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .language {
+      min-height: 44px;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    article:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a class="brand" href="./" aria-label="Bon Quran home">
+      <span class="brand-icon">۞</span>
+      <span>
+        Bon Quran
+        <small>READ • LEARN • REMEMBER</small>
+      </span>
+    </a>
+
+    <button
+      id="themeButton"
+      class="icon-button"
+      type="button"
+      aria-label="Change theme"
+      title="Change theme"
+    >☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow" lang="ar" dir="rtl">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </p>
+
+      <h1>Welcome to Bon Quran</h1>
+
+      <p>ቁርአንን አንብብ፣ ተማር፣ አስታውስ።</p>
+    </section>
+
+    <section class="language-section">
+      <h2>Choose your language</h2>
+
+      <div class="languages" aria-label="Select language">
+        <button class="language active" type="button" data-lang="ar">
+          العربية
+        </button>
+
+        <button class="language" type="button" data-lang="am">
+          አማርኛ
+        </button>
+
+        <button class="language" type="button" data-lang="en">
+          English
+        </button>
+
+        <button class="language" type="button" data-lang="om">
+          Afaan Oromoo
+        </button>
+      </div>
+    </section>
+
+    <section class="search-section" id="searchSection">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search Surah..."
+        aria-label="Search Surah"
+        autocomplete="off"
+      >
+    </section>
+
+    <section class="content-section" id="librarySection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE HOLY QURAN</p>
+          <h2>Surah Library</h2>
+        </div>
+
+        <span class="count">114 Surahs</span>
+      </div>
+
+      <div id="surahList" class="surah-list" aria-live="polite">
+        <div class="loading">Preparing Quran library...</div>
+      </div>
+    </section>
+
+    <section class="reader" id="reader" hidden>
+      <div class="reader-header">
+        <button
+          id="backButton"
+          class="back-button"
+          type="button"
+        >← Back to Surahs</button>
+      </div>
+
+      <h2 id="surahTitle"></h2>
+
+      <div id="ayahList" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>۞ Bon Quran</p>
+    <small>Arabic • Amharic • English • Afaan Oromoo</small>
+    <p><small>Quran text and translations must be verified from trusted sources.</small></p>
+  </footer>
+
+  <!-- Load configuration before the application -->
+  <script src="./supabase-config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
