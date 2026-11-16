@@ -7,11 +7,11 @@
   "use strict";
 
   // Supabase Dashboard > Project Settings > API
-  const SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
+  const SUPABASE_URL = sb_publishable_4X1EqtdSb5TxRrp445x-Gw_cj5cfxGC
 
   // Supabase Publishable key (NOT secret key)
   const SUPABASE_PUBLISHABLE_KEY =
-    "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+    sb_publishable_4X1EqtdSb5TxRrp445x-Gw_cj5cfxGC
 
   const configured =
     SUPABASE_URL.startsWith("https://") &&
