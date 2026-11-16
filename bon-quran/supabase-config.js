@@ -6,7 +6,7 @@
     "https://jemfdazltrnwhdfkldyy.supabase.co";
 
   const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_ከSupabaseየCopyያደረግኸውንሙሉቁልፍ";
+    "sb_publishable_4X1EqtdSb5TxRrp445x-Gw_cj5cfxGC";
 
   const configured =
     SUPABASE_URL.startsWith("https://") &&
