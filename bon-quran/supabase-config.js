@@ -6,7 +6,7 @@
     "https://jemfdazltrnwhdfkldyy.supabase.co";
 
   const SUPABASE_PUBLISHABLE_KEY =
-    "PASTE_YOUR_FULL_PUBLISHABLE_KEY_HERE";
+    DwxbBvIxhvdGpA9oIic_QQ_5yDqjyIT
 
   const configured =
     SUPABASE_URL.startsWith("https://") &&
