@@ -7,7 +7,7 @@
     "https://jemfdazltrnwhdfkldyy.supabase.co";
 
   const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_niNTsAqzkr_HUqlDz5mn2A_xhGN1Kc";
+    sb_publishable_4X1EqtdSb5TxRrp445x-Gw_cj5cfxGC
 
   // Check configuration
   const configured =
